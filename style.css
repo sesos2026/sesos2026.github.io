@@ -1,0 +1,507 @@
+@charset "utf-8";
+/* CSS Document */
+ 
+/* Small reset */
+ 
+article,aside,
+footer,header,hgroup,menu,nav {
+    display:block;
+}
+ 
+ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+ 
+     
+ 
+/* Clear floats */
+ 
+.clearfix:after
+{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+ 
+.clearfix
+{
+  *zoom: 1;
+}
+ 
+/* Layout styles */
+ 
+body
+{	
+	
+    background: #D3D3D3 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
+    margin: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: small;
+}
+ 
+header
+{
+    padding: 10px 0;
+    background-color: #A37F2F;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#D19A01), to(#4c2626));
+    background-image: -webkit-linear-gradient(top, #D19A01, #4c2626);
+    background-image: -moz-linear-gradient(top, #D19A01, #4c2626);
+    background-image: -ms-linear-gradient(top, #D19A01, #4c2626);
+    background-image: -o-linear-gradient(top, #D19A01, #4c2626);
+    background-image: linear-gradient(top, #D19A01, #4c2626);
+    -moz-box-shadow: 0 1px 0 #fff, 0 -3px 3px #000 inset;
+    -webkit-box-shadow: 0 1px 0 #fff, 0 -3px 3px #000 inset;
+    box-shadow: 0 1px 0 #fff, 0 -3px 3px #000 inset;
+}
+ 
+
+ 
+header h1
+{
+    margin: 0;
+    font: 25px/1 'Luckiest Guy', cursive; /* Google font API */
+    float: left;
+    text-shadow: 0 1px 0 rgba(0,0,0,.9);
+}
+ 
+
+ 
+header a
+{
+    color: #eee;
+    text-decoration: none;
+}
+
+ /* -------------------------------------------------- */
+ font {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 15px;
+	text-align: left;
+	text-align: justify;
+	align: left;	}
+/* --------------------------------------------------- */
+ 
+ textpg {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+ }
+ 
+ section {
+	margin: 20px 35px 130px 35px;
+ }
+footer
+{
+    text-align: right;
+    width: 350px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+ 
+#tw, #fb
+{
+    float: right;
+    width: 130px;
+    margin: 0 0 0 0;
+    overflow: hidden;
+}
+ 
+/* --------------------------------------------------- */       
+ 
+#main
+{
+    margin: 0 auto 0 auto;
+    width: 960px;
+}
+ 
+aside
+{
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+}
+ 
+#content
+{
+    float: left;
+    width: 753px;
+}
+
+img {
+	position: relative;
+    padding: 0px;
+    margin: 0 0 0px 0;
+    -moz-box-shadow: 0 1px 1px #999;
+    -webkit-box-shadow: 0 1px 1px #999;
+    box-shadow: 0 1px 1px #999;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+img2
+{
+position: relative;
+    padding: 0px;
+    margin: 0 0 0px 0;
+    -moz-box-shadow: 0 1px 1px #999;
+    -webkit-box-shadow: 0 1px 1px #999;
+    box-shadow: 0 1px 1px #999;
+    
+}
+
+article
+{
+    position: relative;
+    padding: 10px;
+    margin: 0 0 0 0;
+    text-align: center;
+    background: #fff;
+    -moz-box-shadow: 0 1px 1px #999;
+    -webkit-box-shadow: 0 1px 1px #999;
+    box-shadow:  0 1px 1px #999;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    font-color: #020;
+}
+ 
+article:before, article:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 10px;
+  width: 0%;
+  top: 80%;
+  max-width:100px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+ 
+article:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}        
+ 
+article footer
+{
+    text-align: center;
+    
+}
+ 
+article footer span
+{
+  padding: 0 10px 0 20px;
+  margin: 0 0 0 12px;
+  background: #888071;
+  color: #fff;
+  font:  12px/24px arial, helvetica;
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 1px 0 #999;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+  -moz-box-shadow: 0 1px 0 #fff, 0 1px 0 #999 inset;
+  -webkit-box-shadow: 0 1px 0 #fff, 0 1px 0 #999 inset;
+  box-shadow: 0 1px 0 #fff, 0 1px 0 #999 inset;
+}
+ 
+ .just {
+ text-align: justify;
+ text-align:middle;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 15px;
+ }
+
+ .just2 {
+ text-align: justify;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 15px;
+ }
+
+  .justnew {
+ text-align: center;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 15px;
+ }
+
+a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #353C6A;
+	font-size: 15px;
+	
+	
+	 -moz-border-radius: 5 5px 5px 5;
+  border-radius: 5 5px 5px 5;
+  -moz-box-shadow: 5 5px 5 #fff, 5 1px 0 #999 inset;
+  -webkit-box-shadow: 5 5px 5 #fff, 5 1px 0 #999 inset;
+  box-shadow: 5 5px 5 #fff, 5 1px 5 #999 inset;
+	
+}
+
+.just3 {
+ text-align: justify;
+ margin: 10px 35px 0 35px;
+ visibility:hidden;
+ }
+
+article footer span:before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-color: transparent #888071 transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+}
+ 
+article footer span:after
+{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  -moz-box-shadow: -1px -1px 2px #777;
+  -webkit-box-shadow: -1px -1px 2px #777;
+  box-shadow: -1px -1px 2px #777;
+}        
+ 
+
+ 
+/* Vertical menu */
+ 
+#menu li
+{
+  margin: 0 0 5px 0;
+  
+}
+ 
+#menu a
+{
+  display: block;
+  *display: inline-block;
+  *width: 200px;
+  text-decoration: none;
+  background: #ddd;
+  color: #444;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font: bold 12px Arial,Helvetica;
+ 
+  
+  -moz-box-shadow: 0 1px 0 #ccc;
+  -webkit-box-shadow: 0 1px 0 #ccc;
+  box-shadow: 0 1px 0 #ccc;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.0em;
+}
+  
+#menu .expandable
+{
+    position: relative;
+}
+ 
+#menu .expandable:before,
+#menu .expandable:after
+{
+  content: '';
+  position: absolute;
+  right: 5px;
+  margin-top: 0;
+  
+}
+ 
+#menu .expandable:before
+{
+  
+   margin-top: 6px;
+}
+ 
+#menu .expanded:after
+{
+  
+}
+ 
+#menu .expanded:before
+{
+    
+}
+
+ 
+#menu ul a
+{
+    background: #A9A9A9;
+    text-transform: none;
+    font-weight: normal;
+    
+}
+ 
+#menu ul a:hover
+{
+    background: #fafafa;
+    color: #444;
+}
+
+#link {
+		position:absolute;
+		top: 650px;
+		left: auto;
+		margin:auto;
+}
+#linkOUT {
+		position:absolute;
+		top: 660px;
+		left: auto;
+		
+
+	margin:auto;
+}
+h1, h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 18px;
+}
+h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 17px;
+	
+}
+
+h1 {
+	letter-spacing: 1px;
+	font-size: 30px;
+}
+
+.blockbg {
+	background: #D9D785;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+
+hr {
+	display: none;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	
+	margin: 0 0px 0 0;
+	
+}
+
+img.right {
+	
+	margin: 0 0 0 0px;
+	
+}
+
+/* Header */
+
+#header {
+	width: 1024px;
+	margin: 0 auto;
+	height: 190px;
+	letter-spacing: -1px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Logo */
+
+#logo {
+	float: center;
+	margin-top: 10px;
+}
+
+
+#logo h1 {
+	background: url(images/icmc.png) no-repeat left 50%;
+	padding-left: 60px;
+	text-align: center;
+	font-size: 2.2em;
+	color: #000000;
+}
+
+#logo h1 a {
+	color: #353C6A;
+}
+
+#logo h2 a, #logo p a {
+	color: #000;
+}
+
+#logo a {
+	text-decoration: none;
+}
+.bl{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 15px;
+	text-align: justify;
+	
+}
+
+.bll{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #7B7467;
+	font-size: 15px;
+	text-align: justify;
+	line-height:200%;
+}
+.bllf
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	color: #000;
+	font-size: 15px;
+	text-align: justify;
+	line-height:200%;
+}
+
+
+
+
+
+
+
+
+
+
