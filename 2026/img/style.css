@@ -31,7 +31,7 @@ ul
  
 .clearfix
 {
-  /* *zoom: 1; */
+  *zoom: 1;
 }
  
 /* Layout styles */
@@ -39,7 +39,7 @@ ul
 body
 {	
 	
-    background: #D3D3D3 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
+    background: #4682B4 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC);
     margin: 0;
     font-family: Verdana, Arial, Helvetica, sans-serif; 
     font-size: small;
@@ -48,8 +48,8 @@ body
 header
 {
     padding: 10px 0;
-    background-color: #A37F2F;
-    /* background-image: -webkit-gradient(linear, left top, left bottom, from(#D19A01), to(#4c2626)); */
+    background-color: #4682B4;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#D19A01), to(#4c2626));
     background-image: -webkit-linear-gradient(top, #D19A01, #4c2626);
     background-image: -moz-linear-gradient(top, #D19A01, #4c2626);
     background-image: -ms-linear-gradient(top, #D19A01, #4c2626);
@@ -89,7 +89,7 @@ header a
  
  textpg {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #FFFFFF;
+	color: #000;
  }
  
  section {
@@ -129,6 +129,7 @@ aside
 #content
 {
     float: left;
+    width: 753px;
 }
 
 img {
@@ -238,12 +239,6 @@ article footer span
  font-size: 15px;
  }
 
-  .justnew {
- text-align: center;
- font-family: Verdana, Arial, Helvetica, sans-serif;
- font-size: 15px;
- }
-
 a {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color: #353C6A;
@@ -306,8 +301,8 @@ article footer span:after
 #menu a
 {
   display: block;
-  /* *display: inline-block;
-  *width: 200px; */
+  *display: inline-block;
+  *width: 200px;
   text-decoration: none;
   background: #ddd;
   color: #444;
@@ -357,7 +352,7 @@ article footer span:after
  
 #menu ul a
 {
-    background: #A9A9A9;
+    background: #FFFAE8;
     text-transform: none;
     font-weight: normal;
     
@@ -365,7 +360,7 @@ article footer span:after
  
 #menu ul a:hover
 {
-    background: #fafafa;
+    background: #4682B4;
     color: #444;
 }
 
@@ -494,6 +489,10 @@ img.right {
 	text-align: justify;
 	line-height:200%;
 }
+
+
+
+
 
 
 
