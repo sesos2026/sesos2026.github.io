@@ -13,7 +13,7 @@ Most workshop pages are self-contained static HTML files with local CSS and imag
 
 ## Preview Locally
 
-Because the site is static, it can be previewed with any local Web server.
+Because the site is static, it can be previewed with any local browser or Web server.
 
 ## Updating The Site
 
