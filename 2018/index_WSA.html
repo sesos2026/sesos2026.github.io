@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+		<title>Women in Software Architecture</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+						<article class="box post post-excerpt">
+
+							<div class="home">
+                        	<header>
+								<h2>Women in Software Architecture</h2>
+								<p>Reporting of a Systematic Mapping Study</p> <br><br>
+                                
+							</header> 
+                                
+                                <p>
+                                    Abstract and keywords ...
+                                </p>
+                            </div>
+                    </article>
+							
+                                
+							
+
+					<!-- Protocol -->
+						<article class="box post post-excerpt">
+							<header>
+								<h2>Protocol Presentation</h2>
+								
+							</header>
+							<div class="protocol">
+								Protocol description .....
+							</div>
+							
+						</article>
+                    <!-- conductionResults -->
+                        <article class="box post post-excerpt">
+							<header>
+								<h2>Search Results</h2>
+								
+							</header>
+                            <section id="results" class="results">
+							<div class="results">
+								Graficos
+							</div>
+                            </section>
+							
+						</article>
+
+                    
+                    <!-- Timeline -->
+						<article class="box post post-excerpt">
+							<header>
+								<h2>Women in Software Architecture Through Years</h2>
+								
+							</header>
+							<div class="timeline">
+								                            
+                                <div id="participation"><h3>Women Participation Over Time</h3></div>
+                                
+                                  <div id="timeline1" style="width: 860px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+          
+     Plotly.d3.csv('https://dl.dropboxusercontent.com/u/44186828/publicationsMenVsWomentOverTime.csv', function(err, rows){
+
+function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+
+ var years = unpack(rows,'year');
+         console.log(years.toString());
+         
+ var womenAuthors = unpack(rows, 'amountWomen');
+ var justMen = unpack(rows,'amountMen');
+ var total = unpack(rows, 'total');
+         
+               
+        var traceJustMen = {
+            x: years,
+            y: justMen,
+            mode: 'lines+markers',
+            name: 'Works with only men authors',
+            marker: {
+                size: [justMen],
+                color: 'rgb(255, 144, 14)'
+                
+            }
+        };
+      var traceWomenAuthors = {
+            x: years,
+            y: womenAuthors,
+            mode: 'lines+markers',
+            name: 'Works with women authors',
+            marker: {
+                size: [womenAuthors],
+                color: 'rgb(255, 65, 54)'
+                
+            }
+        };
+         
+         var traceTotal = {
+            x: years,
+            y: total,
+            mode: 'lines+markers',
+            name: 'Total',
+            marker: {
+                size: [total],
+                color: 'rgb(0, 0, 100)'
+                
+            }
+        };
+
+
+var data = [traceJustMen,traceWomenAuthors,traceTotal];
+
+var layout = {
+  title: 'Publications in Software Architecture Over Time. Confidence interval: 99%',
+  showlegend: true,
+  height: 600,
+  width: 860,
+    xaxis: {
+    title: 'Years', 
+    showgrid: false, 
+    zeroline: false
+  }, 
+  yaxis: {
+    title: 'Amount of works', 
+    showline: false
+  }
+};   
+         
+         
+         
+         
+Plotly.plot('timeline1', data, layout, {showLink: false});
+});
+
+    </script>
+                                <br><br>
+                                
+                               
+                            <div class="percentage"><h3>Percentage of Participation</h3>
+                            <br>
+                                <p>
+                                    Pie here!
+                                </p>
+                            
+                            </div>
+                            
+                            <div class="top100"><h3>Top 100 WSA</h3>
+                            
+                            <br>
+                                <p>
+                                    Milena's top 100 list updated!
+                                </p>
+                            
+                            </div>
+                            </div>
+                            
+                                </article>   
+						
+                            <br><br>
+                            
+                    <!-- worldwide -->
+                        <article class="box post post-excerpt">
+							<header>
+								<h2>Women in Software Architecture Around the World</h2>
+								
+							</header>
+                            <section id="worldwide" class="worldwide">
+							<div class="worldwide">
+								
+                            <div class="distribution" id="distribution"><h3>Distribution of Women Authors by Continent and Countries </h3>  
+                                <br><br>
+                                
+  <div id="myDiv6" style="width: 960px; height: 640px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+ <script>
+ 
+     Plotly.d3.csv('https://dl.dropboxusercontent.com/u/44186828/publicationsJustWomenByCountry.csv', function(err, rows){
+var YEAR = 2007;
+var continents = ['Asia', 'Europe', 'Africa', 'Oceania', 'Americas', 'Europe and Asia','Africa and Asia' ];
+var POP_TO_PX_SIZE = 1000;
+function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+
+var data = continents.map(function(continent) {
+  var rowsFiltered = rows.filter(function(row) {
+      return (row.continent === continent);
+  });
+  return {
+      mode: 'markers',
+      name: continent.concat(' - With Women'),
+      x: unpack(rowsFiltered, 'country'),
+      y: unpack(rowsFiltered, 'amountWomen'),
+      text: unpack(rowsFiltered, 'country'),
+      marker: {
+          sizemode: 'area',
+          size: unpack(rowsFiltered, 'size')//,
+          //sizeref: POP_TO_PX_SIZE
+      }
+  };
+});
+var layout = {
+  title:'Comparison of Publications of Women and Men Authors By Continent and Country',    
+  xaxis: {title: 'Country'},
+  yaxis: {title: 'Amount of authors', type: 'log'},
+  margin: {t: 60},
+  hovermode: 'closest'
+};
+Plotly.plot('myDiv6', data, layout, {showLink: false});
+
+
+var data1 = continents.map(function(continent) {
+  var rowsFiltered = rows.filter(function(row) {
+      return (row.continent === continent);
+  });
+  return {
+      mode: 'markers',
+      name: continent.concat(' - Just Men'),
+      x: unpack(rowsFiltered, 'country'),
+      y: unpack(rowsFiltered, 'amountMen'),
+      text: unpack(rowsFiltered, 'country'),
+      marker: {
+          sizemode: 'area',
+          size: unpack(rowsFiltered, 'size1')//,
+          //sizeref: POP_TO_PX_SIZE
+      }
+  };
+});
+
+         Plotly.plot('myDiv6', data1, layout, {showLink: false});
+});
+                                </script> </div>
+                                
+                                <br><br>
+                                <div class="continent" id="continent"><h3>Publications by Continent</h3>  
+                                                    
+                                
+                                <br><br>
+                                
+                                <div id="myDiv9" style="width: 860px; height: 460px;"><!-- Plotly chart will be drawn inside this DIV --></div>         
+    
+ <script>
+
+  var continent	= ['Africa', 'Africa and Asia', 'Americas', 'Asia', 'Europe','Europe and Asia','Oceania', 'NR'];
+  var amountWomen =	['57', '12', '650', '619', '849', '56', '39', '35'];
+  var amountMen	= ['154', '26', '2146', '1961', '3079', '93', '108', '274'];
+  var amount =	['211', '38', '2796', '2580', '3928', '149', '147', '309'];
+
+     
+    var trace1 = {
+            x: continent,
+            y: amount,
+            name: 'Total of Publications by Continent',
+            type: 'bar',
+        };
+      
+        var trace2 = {
+           x: continent,
+           y: amountMen,
+           name: 'Publications Just Men by Continent',
+           type: 'bar'
+        };
+     
+       var trace3 = {
+           x: continent,
+           y: amountWomen,
+           name: 'Publications With Women by Continent',
+           type: 'bar'
+        };
+            
+
+var data = [trace1, trace2, trace3];
+      
+      var layout1 = {barmode: 'group'};
+
+var layout = {
+  title: '',
+  showlegend: true,
+  height: 460,
+  width: 860,
+    xaxis: {
+    title: 'Continent', 
+    showgrid: false, 
+    zeroline: false
+  }, 
+  yaxis: {
+    title: 'Amount of publications', 
+    showline: false
+  }
+};
+      
+      var layout1 = {
+  title:'Publications of Women By Continent',
+  height: 600,
+  width: 1200
+};
+
+Plotly.newPlot('myDiv9', data, layout);
+     
+     
+ </script>                                
+                                
+                               </div>   
+							</div>
+                            </section>
+							
+						</article>
+                    
+                    <!-- publicationTypes -->
+                        <article class="box post post-excerpt">
+							<header>
+								<h2>Publication Types</h2>
+								
+							</header>
+                            <section id="publicationsType" class="publicationsType">
+							<div class="publicationsType">
+                                <br>
+                                <p>
+                                Graphic comparing all publication types through time.
+								</p>
+                                <br>
+                                
+                                <div id="article"><h3>Journal Articles</h3>
+                                
+                                    <p>
+                                      Top 5/10 of Journals where women have published.
+                                    </p>
+                                
+                                </div>
+                                <br>
+                                
+                                <div id="inproceedings"><h3> Conference Proceedings</h3>
+                                    <p>
+                                      Top 5/10 of conferences where women have published.
+                                    </p>
+                                
+                                </div>
+                                <br>
+                                
+                                <div id="chapters"><h3> Book Chapters</h3>
+                                    <p>
+                                      List of books(incollection) where women have published chapters.
+                                    </p>
+                                
+                                </div>
+                                <br>
+                                
+                                <div id="book"><h3>Books</h3>
+                                    <p>
+                                      List of books published by women
+                                    </p>
+                                
+                                </div>
+                                <br>
+							
+                                
+                                
+							</div>
+                            </section>
+							
+						</article>
+                    
+                    <!-- discussion -->
+                        <article class="box post post-excerpt">
+							<header>
+								<h2>Discussion</h2>
+								
+							</header>
+                            <section id="discussion" class="discussion">
+							<div class="discussion">
+								Graficos
+							</div>
+                            </section>
+							
+						</article>
+                    
+                    <article class="box post post-excerpt">
+							<header>
+								<h2>Authors</h2>
+								
+							</header>
+                            <section id="authors" class="authors">
+							<div class="authors">
+								<p>
+				                Milena Guessi, Ana Allian, Lina Garcés, Cristiane Lana, Katia Romero Felizardo, Elena Navarro and Elisa Yumi Nakagawa</p> 
+                                <p>photos and contact email...</p>
+							</div>
+                            </section>
+                         
+                            <section id="organizations" class="organizations">
+							<div class="organizations">
+								<h3>Affiliations</h3>                               
+							</div>
+                            </section>
+                        
+                            <section id="support" class="support">
+							<div class="support">
+								<h3>Acknowledgment</h3>                               
+							</div>
+                            </section>
+							
+						</article>
+                    
+                                
+                                
+					<!-- Pagination -->
+                     
+                       
+						
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<div id="sidebar">
+
+				<!-- Logo -->
+					<h1 id="logo"><a href="#logo">WSA@ECSA</a></h1>
+
+				<!-- Home -->
+                   <section class="home">
+                    <header>
+                        <a href="#home"><h2>Presentation</h2></a>
+                    </header>
+                   </section>
+					
+
+				<!-- protocol -->
+					<section class="protocol">
+						<header>
+                            
+							<a href="#protocol"><h2>Protocol </h2></a>
+						</header>
+						<ul>
+							<li><a href="#objectives">Objectives</a></li>
+							<li><a href="#questions">Research Questions</a></li>
+							<li><a href="#strategy">Search Strategy</a></li>
+							
+						</ul>
+					</section>
+                
+                <!-- results -->
+                  <section class="results">
+						<header>
+                            
+							<a href="#results"><h2>Search Results </h2></a>
+						</header>
+						<ul>
+							<li><a href="#conduction">Conduction Results</a></li>
+							<li><a href="#primaryStudy">Final List of Primary Study</a></li>
+							<li><a href="#dataBase">Primary Study Data Base</a></li>
+							
+						</ul>
+					</section>  
+                
+                <!-- timeline -->
+                    <section class="timeline">
+						<header>
+                            
+							<a href="#timeline"><h2>RQ1. WSA Through Time </h2></a>
+						</header>
+						<ul>
+							<li><a href="#participation">RQ1.1. Women Participation Over Time</a></li>
+							<li><a href="#percentage">RQ1.2. Percentage of Participation</a></li>
+							<li><a href="#top100">RQ1.3. Top 100 WSA</a></li>
+							
+						</ul>
+					</section>     
+                            
+				<!-- worldwide -->		
+                
+                <section class="worldwide">
+						<header>
+                            
+							<a href="#worldwide"><h2>RQ2. WSA Around the World </h2></a>
+						</header>
+						<ul>
+							<li><a href="#distribution">RQ2.1. Distribution of WSA</a></li>
+                            <li><a href="#continent">RQ2.2 Publications by Continent</a></li>
+							
+							
+						</ul>
+					</section>
+                
+                
+				<!-- publicationsType -->				
+                <section class="publicationsType">
+						<header>
+                            
+							<a href="#worldwide"><h2>RQ3. Publications Type</h2></a>
+						</header>
+						<ul>
+							<li><a href="#article">RQ3.1 Journal Articles</a></li>
+							<li><a href="#inproceedings">RQ3.2 Conference Proceedings</a></li>
+							<li><a href="#chapters">RQ3.3 Book Chapters</a></li>
+                            <li><a href="#book">RQ3.4 Books</a></li>
+							
+						</ul>
+					</section>     
+				
+                
+                <section class="discussion">
+						<header>
+                            
+							<a href="#discussion"><h2>Discussion</h2></a>
+						</header>
+						
+					</section>    
+                
+                <section class="authorship">
+                    <header>
+                        <a href="#authorship"><h2>Authorship</h2></a>
+                    </header>
+                       <ul>
+							<li><a href="#authors">Authors</a></li>
+							<li><a href="#organizations">Research Groups</a></li>
+							<li><a href="#support">Acknowledgment</a></li>
+							
+						</ul>
+                   </section>
+                
+				<!-- Copyright -->
+					<ul id="copyright">
+						<li>&copy; START-ICMC/USP.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+
+	</body>
+</html>
