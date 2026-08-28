@@ -370,6 +370,21 @@ article footer span:after
     color: #444;
 }
 
+#menu a.social-icon
+{
+    display: inline-block;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+}
+
+#menu a.social-icon span
+{
+    font-size: 28px;
+    color: #333333;
+}
+
 #link {
 		position:absolute;
 		top: 650px;
