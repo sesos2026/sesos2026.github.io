@@ -289,8 +289,6 @@ article footer span:after
 #menu a
 {
   display: block;
-  *display: inline-block;
-  *width: 200px;
   text-decoration: none;
   background: #ddd;
   color: #444;
