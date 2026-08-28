@@ -1,7 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
- 
-/* Small reset */
  
 article,aside,
 footer,header,hgroup,menu,nav {
@@ -14,8 +11,7 @@ ul
     margin: 0px;
     padding: 0px;
 }
- 
-     
+    
  
 /* Clear floats */
  
@@ -27,11 +23,6 @@ ul
   content: " ";
   clear: both;
   height: 0;
-}
- 
-.clearfix
-{
-  *zoom: 1;
 }
  
 /* Layout styles */
@@ -84,7 +75,7 @@ header a
 	font-size: 15px;
 	text-align: left;
 	text-align: justify;
-	align: left;	}
+}
 /* --------------------------------------------------- */
  
  textpg {
@@ -168,7 +159,7 @@ article
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border-radius:5px;
-    font-color: #020;
+    color: #020;
 }
  
 article:before, article:after
@@ -228,7 +219,6 @@ article footer span
  
  .just {
  text-align: justify;
- text-align:middle;
  font-family: Verdana, Arial, Helvetica, sans-serif;
  font-size: 15px;
  }
@@ -249,14 +239,6 @@ a {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color: #353C6A;
 	font-size: 15px;
-	
-	
-	 -moz-border-radius: 5 5px 5px 5;
-  border-radius: 5 5px 5px 5;
-  -moz-box-shadow: 5 5px 5 #fff, 5 1px 0 #999 inset;
-  -webkit-box-shadow: 5 5px 5 #fff, 5 1px 0 #999 inset;
-  box-shadow: 5 5px 5 #fff, 5 1px 5 #999 inset;
-	
 }
 
 .just3 {
@@ -314,7 +296,7 @@ article footer span:after
   color: #444;
   padding: 10px 0;
   text-transform: uppercase;
-  font: bold 12px Arial,Helvetica;
+  font: normal 12px Arial,Helvetica;
  
   
   -moz-box-shadow: 0 1px 0 #ccc;
@@ -344,18 +326,7 @@ article footer span:after
   
    margin-top: 6px;
 }
- 
-#menu .expanded:after
-{
-  
-}
- 
-#menu .expanded:before
-{
-    
-}
 
- 
 #menu ul a
 {
     background: #A9A9A9;
@@ -377,12 +348,6 @@ article footer span:after
     box-shadow: none;
     padding: 0;
     width: auto;
-}
-
-#menu a.social-icon span
-{
-    font-size: 28px;
-    color: #333333;
 }
 
 #link {
